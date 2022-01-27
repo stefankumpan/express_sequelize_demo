@@ -1,0 +1,36 @@
+{
+  "SK.js: Sequelize Model Template": {
+    "prefix": "skSequelizeModel",
+    "body": [
+      "const { DataTypes } = require(\"sequelize\");",
+      "const configDB = require(\"../database/configDB\");",
+      "",
+      "const ${1:Name}= configDB.define(\"${1:Name}\", {",
+      "  name: {",
+      "    type: DataTypes.STRING,",
+      "    allowNull: false,",
+      "  },",
+      "});",
+      "",
+      "module.exports = ${1:Name};",
+      ""
+    ],
+    "description": "SK.js: Sequelize Model Template"
+  },
+  "SK.js: Sequelize Sqlite Template Init": {
+    "prefix": "sk SequelizeSqliteTemplateInit",
+    "body": [
+      "",
+      "const { Sequelize } = require(\"sequelize\");",
+      "",
+      "const ${1:name} = new Sequelize({",
+      "  dialect: \"sqlite\",",
+      "  storage: \"${2:./path/dev.db}\",",
+      "});",
+      "",
+      "module.exports =  ${1:name};",
+      ""
+    ],
+    "description": "SK.js: Sequelize Sqlite Template Init"
+  }
+}

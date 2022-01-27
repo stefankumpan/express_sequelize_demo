@@ -1,0 +1,23 @@
+
+
+### Get Welcome Message
+GET http://127.0.0.1:6500/welcome
+
+### Create new User 
+POST http://127.0.0.1:6500/auth/sign-up HTTP/1.1
+content-type: application/json
+
+{
+    "username": "demo",
+    "password": "demo",
+    "email": "demo@example.com"
+}
+
+### Login User 
+POST http://127.0.0.1:6500/auth/sign-in HTTP/1.1
+content-type: application/json
+
+{
+    "username": "demo"
+}
+

@@ -1,0 +1,72 @@
+{
+  // Start Snippets
+  "SK.js: Express Start Template Init": {
+    "prefix": "skExpressStartInit",
+    "body": [
+      "const express = require(\"express\");",
+      "const PORT = 6500;",
+      "",
+      "const app = express();",
+      "",
+      "app.use(express.json());",
+      "app.get(\"/\", (req, res) => {",
+      "  res.send(\"Welcome my friend\");",
+      "});",
+      "",
+      "app.listen(PORT, (_) => {",
+      "  console.log(` ",
+      "  Info",
+      "  ----------------------------------------------",
+      "  ===> Server Running on http://127.0.0.1:${PORT}",
+      "  ----------------------------------------------`);",
+      "});",
+      ""
+    ],
+    "description": "SK.js: Express Start Template Init"
+  },
+  "SK.js: Express Router Template Init": {
+    "prefix": "skExpressRouterInit",
+    "body": [
+      "const express = require(\"express\");",
+      "",
+      "const routes = express.Router();",
+      "",
+      "routes.get(\"/welcome\", (req, res, next) => {",
+      "  res.send(\"Welcome\");",
+      "});",
+      "",
+      "module.exports = routes;",
+      ""
+    ],
+    "description": "SK.js: Express Router Template Init"
+  },
+  //Single Snippets
+  "SK.js: Express Router Template ": {
+    "prefix": "skExpressRoute",
+    "body": [
+      "routes.${1|get,post,put,patch,delete|}(\"/${2:path}\", ${3:name}Controller);"
+    ],
+    "description": "SK.js: Express Router Template "
+  },
+  "SK.js: Express Controller Exports Template": {
+    "prefix": "skExpressControllerExports",
+    "body": [
+      "exports.${1:name}Controller = async(req, res, next) => {",
+      "  res.status(200).json({ msg: \"Message from Controller\" });",
+      "};",
+      "",
+      ""
+    ],
+    "description": "SK.js: Express Controller Template"
+  },
+  "SK.js: Express Controller Template": {
+    "prefix": "skExpressController",
+    "body": [
+      "",
+      "const ${1:name}= async (req, res, next) => {",
+      "  res.json({msg:\"${1:name}\"});",
+      "};"
+    ],
+    "description": "SK.js: Express Controller Template"
+  }
+}
